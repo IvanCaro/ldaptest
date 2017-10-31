@@ -5,7 +5,8 @@ const configExternos = {
   baseDN: process.env.LDAP_USER_ADMIN_EXTERNOS,
   tlsOptions: {
     rejectUnauthorized: (process.env.LDAP_VERIFICAR_CERTIFICADO_TLS === 'true')
-  }
+  },
+  timeout: 60000
 };
 
 const configInternos = {

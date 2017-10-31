@@ -34,17 +34,3 @@ describe.only('Autenticando usuario con active directory (ldap)', () => {
     assert.isNotNull(authResult);
   });
 });
-
-let domainUser;
-before(done => {
-  ldap
-    .extractDomainAndUserName(userName)
-      .then(result => {
-        assert.isNotNull(result);
-        domainUser = result;
-        done();
-      })
-    .catch(err => {
-      done(err);
-    });
-});

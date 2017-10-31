@@ -23,9 +23,10 @@ before(done => {
         authResult = result;
         done();
       })
-    .catch(err => {
-      done(err);
-    });
+      .catch(err => {
+        console.log(err);
+        done(err);
+      });
 });
 
 describe.only('Autenticando usuario con active directory (ldap)', () => {
@@ -47,10 +48,3 @@ before(done => {
       done(err);
     });
 });
-
-describe('Extrayendo usuario y dominio desde userName', () => {
-  it('Usuario y dominio', () => {
-    assert.isNotNull(domainUser);
-  });
-});
-

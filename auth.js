@@ -3,8 +3,11 @@ require('dotenv').config({
 });
 
 const ldap = require('./helpers/ldap');
-const userName = 'e_15617277-4@minvuext.cl';
-const password = 'password.1';
+//const userName = 'e_15617277-4@minvuext.cl';
+//const password = 'password.1';
+
+const userName = 'icarof@minvu.cl';
+const password = 'Res.8020';
 
 ldap
 .authenticate(userName, password)

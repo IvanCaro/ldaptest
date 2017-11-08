@@ -9,7 +9,8 @@ const {
 
 const repo = require('../helpers/repo');
 
-before(done => {
+before(function (done) {
+  this.timeout(10000);
   repo.connect(done);
 });
 

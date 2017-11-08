@@ -9,7 +9,7 @@ const {
 const ldap = require('../helpers/ldap');
 
 const userName = "jtorresr@minvu.cl";
-const password = 'lagash.2017';
+const password = 'lagash.2017_';
 
 //const userName = 'e_15617277-4@minvuext.cl';
 //const password = 'password.1';

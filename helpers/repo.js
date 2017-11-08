@@ -17,7 +17,8 @@ const config = {
   dialect: 'mssql',
   dialectOptions: {
     database: process.env.DB_NAME,
-    instanceName: 'Instance2',
+    // instanceName: 'DESARROLLO',
+    // instanceName: 'Instance2',
     trustedConnection: true
   }
 };

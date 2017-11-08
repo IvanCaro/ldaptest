@@ -58,8 +58,12 @@ function getUserById(userId) {
 
 exports.getUserById = getUserById;
 
+exports.connect = connect;
+
+/*
 connect(() => {
   getUserById(10).then(records => {
     console.log(records);
   });
 });
+*/

@@ -9,6 +9,10 @@ const {
 
 const repo = require('../helpers/repo');
 
+before(done => {
+  repo.connect(done);
+});
+
 let result;
 before(done => {
   repo.getUserById(10)
@@ -23,9 +27,10 @@ before(done => {
         });
 });
 
-describe.only('Autenticando usuario con active directory (ldap)', () => {
-  it('Usuario autenticado', () => {
+describe.only('Obteniendo datos de la Base de datos', () => {
+  it('data', () => {
     assert.isNotNull(result);
+    console.log(result);
   });
 });
 

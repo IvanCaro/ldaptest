@@ -12,7 +12,7 @@ const ldap = require('../helpers/ldap');
 //const password = 'lagash.2017';
 
 const userName = 'e_15617277-4@minvuext.cl';
-const password = 'password.1';
+const password = 'password.1.';
 
 let authResult;
 before(done => {

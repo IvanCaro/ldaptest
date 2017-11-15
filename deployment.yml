@@ -14,6 +14,13 @@ spec:
       labels:
         app: pssim-api-1
     spec:
+      hostAliases:
+      - ip: "172.16.50.58"
+        hostnames:
+        - "minvu.ldap"
+      - ip: "10.40.5.44"
+        hostnames:
+        - "minvu.db"
       containers:
       - name: pssim-api-1
         image: minvu.azurecr.io/pssim-api:v18

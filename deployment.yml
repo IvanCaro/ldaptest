@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: pssim-api
+  labels:
+    app: pssim-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pssim-api
+  template:
+    metadata:
+      labels:
+        app: pssim-api
+    spec:
+      hostAliases:
+      - ip: "127.0.0.1"
+        hostnames:
+        - "foo.local"
+        - "bar.local"
+      - ip: "10.1.2.3"
+        hostnames:
+        - "foo.remote"
+        - "bar.remote"
+      containers:
+      - name: pssim-api
+        image: minvu.azurecr.io/pssim-api:v18
+        command:
+          - cat
+        args:
+          - "/etc/hosts"
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: linux

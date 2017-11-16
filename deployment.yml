@@ -23,7 +23,7 @@ spec:
         - "minvu.db"
       containers:
       - name: pssim-api-1
-        image: minvu.azurecr.io/pssim-api:latest
+        image: minvu.azurecr.io/pssim-api:funciona
         ports:
         - containerPort: 80
       nodeSelector:

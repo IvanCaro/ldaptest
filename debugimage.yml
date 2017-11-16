@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: debug-image
+  labels:
+    app: debug-image
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debug-image
+  template:
+    metadata:
+      labels:
+        app: debug-image
+    spec:
+      containers:
+      - name: debug-image
+        image: minvu.azurecr.io/debugimage:latest
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: linux

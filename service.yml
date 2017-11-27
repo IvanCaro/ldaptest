@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
     # the port that this service should serve on
-    - port: 3000
+    - port: 30001
       nodePort: 80
   # label keys and values that must match in order to receive traffic for this service
   selector:

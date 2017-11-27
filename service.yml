@@ -17,3 +17,4 @@ spec:
     context: cas-dto-web
   externalIPs:
   - 10.201.2.13
+  - 10.201.2.15

@@ -10,7 +10,7 @@ spec:
   ports:
     # the port that this service should serve on
     - port: 3000
-    - nodePort: 80
+      nodePort: 80
   # label keys and values that must match in order to receive traffic for this service
   selector:
     name: cas-dto-web

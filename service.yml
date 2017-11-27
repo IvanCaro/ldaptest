@@ -15,4 +15,4 @@ spec:
     name: cas-dto-web
     context: cas-dto-web
   externalIPs:
-  - 80.11.12.10
+  - 10.201.2.13

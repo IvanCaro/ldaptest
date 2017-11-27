@@ -15,3 +15,5 @@ spec:
   selector:
     name: cas-dto-web
     context: cas-dto-web
+  externalIPs:
+  - 10.201.2.13

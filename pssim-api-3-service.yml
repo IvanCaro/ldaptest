@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pssim-api-3-service
+  labels:
+    app: pssim-api-3
+spec:
+  selector:
+    app: pssim-api-3
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: ClusterIP

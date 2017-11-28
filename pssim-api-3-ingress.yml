@@ -14,3 +14,4 @@ spec:
           serviceName: pssim-api-3-service
           servicePort: 80
         path: /something
+        

@@ -1,21 +1,21 @@
 apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
 kind: Deployment
 metadata:
-  name: pssim-api
+  name: pssim-api-2
   labels:
-    app: pssim-api
+    app: pssim-api-2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: pssim-api
+      app: pssim-api-2
   template:
     metadata:
       labels:
-        app: pssim-api
+        app: pssim-api-2
     spec:
       containers:
-      - name: pssim-api
+      - name: pssim-api-2
         image: ivancaro/test:latest
         ports:
         - containerPort: 80

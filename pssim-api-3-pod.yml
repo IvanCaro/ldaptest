@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: extensions/v1beta1
+metadata:
+  name: pssim-api-3-pod
+  labels:
+    app: pssim-api-3
+spec:
+  containers:
+  - name: pssim-api-3-container
+    image: ivancaro/test:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP

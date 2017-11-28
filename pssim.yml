@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: pssim-api
+  labels:
+    app: pssim-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pssim-api
+  template:
+    metadata:
+      labels:
+        app: pssim-api
+    spec:
+      containers:
+      - name: pssim-api
+        image: ivancaro/test:latest
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: linux

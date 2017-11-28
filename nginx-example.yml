@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-1
   labels:
-    app: nginx
+    app: nginx-1
 spec:
   ports:
   - port: 80
@@ -11,21 +11,21 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: nginx
+    app: nginx-1
 ---
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: nginx
+  name: nginx-1
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-1
     spec:
       containers:
-      - name: nginx
+      - name: nginx-1
         image: gcr.io/google_containers/nginx
         ports:
         - containerPort: 80
@@ -33,9 +33,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: http-svc
+  name: http-svc-1
   labels:
-    app: http-svc
+    app: http-svc-1
 spec:
   ports:
   - port: 80
@@ -43,21 +43,21 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: http-svc
+    app: http-svc-1
 ---
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: http-svc
+  name: http-svc-1
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: http-svc
+        app: http-svc-1
     spec:
       containers:
-      - name: http-svc
+      - name: http-svc-1
         image: gcr.io/google_containers/echoserver:1.8
         ports:
         - containerPort: 8080
@@ -83,21 +83,21 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: foo-tls
+  name: foo-tls-1
   namespace: default
 spec:
   rules:
-  - host: foo.bar.com
+  - host: foo.bar1.com
     http:
       paths:
       - backend:
-          serviceName: http-svc
+          serviceName: http-svc-1
           servicePort: 80
         path: /
   - host: bar.baz.com
     http:
       paths:
       - backend:
-          serviceName: nginx
+          serviceName: nginx-1
           servicePort: 80
         path: /

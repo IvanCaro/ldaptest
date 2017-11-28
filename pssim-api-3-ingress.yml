@@ -1,12 +1,16 @@
-kind: Ingress
 apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  name: pssim-api-3-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: rewrite
+  namespace: default
 spec:
   rules:
-  - host: foo.bar.com
+  - host: rewrite.bar.com
     http:
       paths:
       - backend:
           serviceName: pssim-api-3-service
           servicePort: 80
+        path: /something

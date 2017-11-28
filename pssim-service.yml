@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pssim-api
+  labels:
+    name: pssim-api
+    context: pssim-api
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+    - port: 3000
+      nodePort: 30002
+  # label keys and values that must match in order to receive traffic for this service
+  selector:
+    name: pssim-api
+    context: pssim-api

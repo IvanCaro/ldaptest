@@ -4,7 +4,7 @@ metadata:
   name: pssim-api-3-ingress
 spec:
   rules:
-  - host: xyz.bar.com
+  - host: foo.bar.com
     http:
       paths:
       - backend:

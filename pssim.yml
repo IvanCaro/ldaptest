@@ -14,8 +14,8 @@ spec:
       labels:
         app: pssim-api-2
     spec:
-      containers:
       hostname: myhostname
+      containers:
       - name: pssim-api-2
         image: ivancaro/test:latest
         ports:

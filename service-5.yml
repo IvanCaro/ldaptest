@@ -5,7 +5,8 @@ metadata:
   labels:
     tier: frontend
 spec:
-  type: ClusterIP
+  type: ExternalName
+  externalName: "my.database.example.com"
   selector:
     name: pssim-api-5-pod
   ports:

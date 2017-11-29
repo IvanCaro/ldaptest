@@ -11,4 +11,4 @@ spec:
         backend:
           serviceName: pssim-api-4-service
           # the targetPort from service (the port inside a container)
-          servicePort: 8000
+          servicePort: 80

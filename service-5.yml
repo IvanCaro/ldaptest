@@ -6,7 +6,7 @@ metadata:
     tier: frontend
 spec:
   type: ExternalName
-  externalName: "my.database.example.com"
+  externalName: my.database.example.com
   selector:
     name: pssim-api-5-pod
   ports:

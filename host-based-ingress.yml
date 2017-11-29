@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: host-based-ingress
+spec:
+  rules:
+  - host: catastro1.k8.cl
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-service-1
+          servicePort: 90
+  - host: catastro2.k8.cl
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-service-2
+          servicePort: 90

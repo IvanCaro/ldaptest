@@ -12,6 +12,8 @@ spec:
     name: http
   selector:
     k8s-app: nginx-service-1
+  externalIPs:
+  - 10.201.2.16
 ---
 apiVersion: v1
 kind: ReplicationController
@@ -47,6 +49,8 @@ spec:
     name: http
   selector:
     k8s-app: nginx-service-2
+  externalIPs:
+  - 10.201.2.16
 ---
 apiVersion: v1
 kind: ReplicationController

@@ -12,6 +12,6 @@ spec:
     - name: http
       protocol: TCP
       # the port that will be exposed by this service
-      port: 8000
+      port: 80
       # port in a docker container; defaults to what "port" has set
-      targetPort: 8000
+      targetPort: 80

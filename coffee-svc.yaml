@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee-svc
+  labels:
+    app: coffee
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee
+  externalIPs:
+  - 10.201.2.16
+  - 10.201.2.15

@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: pssim-api-4-ingress
+  name: pssim-api-5-ingress
 spec:
   rules:
   - host: catastro.minvu.cl
@@ -9,6 +9,6 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: pssim-api-4-service
+          serviceName: pssim-api-5-service
           # the targetPort from service (the port inside a container)
           servicePort: 80

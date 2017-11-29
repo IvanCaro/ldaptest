@@ -3,15 +3,16 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
   name: rewrite
   namespace: default
 spec:
   rules:
-  - host: rewrite.bar.com
+  - host: catastro.minvu2.cl
     http:
       paths:
       - backend:
-          serviceName: pssim-api-3-service
+          serviceName: pssim-api-10-service
           servicePort: 80
         path: /something
         

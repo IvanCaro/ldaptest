@@ -1,23 +1,23 @@
 apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
 kind: Deployment
 metadata:
-  name: pssim-api-6-pod
+  name: pssim-api-3-pod
   labels:
-    app: pssim-api-6
+    app: pssim-api-3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pssim-api-6
+      app: pssim-api-3
   template:
     metadata:
       labels:
-        app: pssim-api-6
+        app: pssim-api-3
       annotations:
         external-dns.alpha.kubernetes.io: foo.example.org
     spec:
       containers:
-      - name: pssim-api-6-container
+      - name: pssim-api-3-container
         image: ivancaro/test:latest
         ports:
         - containerPort: 80

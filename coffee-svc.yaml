@@ -12,6 +12,3 @@ spec:
     name: http
   selector:
     app: coffee
-  externalIPs:
-  - 10.201.2.16
-  - 10.201.2.15

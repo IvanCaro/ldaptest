@@ -12,6 +12,3 @@ spec:
     name: http
   selector:
     app: tea
-  externalIPs:
-  - 10.201.2.20
-  - 10.201.2.21
